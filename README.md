@@ -27,12 +27,10 @@ axios
 
 ### 项目展示
 
-![](./images/10086-1.png)
+<img src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-e3306813-c467-4fe2-a5b0-4f80a8d3051e/c41d0608-9043-4e9e-a7ad-716c077d2a09.png" style="width:100%; margin-top:10px;" alt="">
 
-![](./images/10086-2.png)
+<img src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-e3306813-c467-4fe2-a5b0-4f80a8d3051e/4bdec592-875b-49f6-a9b8-1f5300df05b6.png" style="width:100%; margin-top:10px;" alt="">
 
 ### 关于我
 
 QQ:965536741
-
-wei:xie950829
