@@ -1,12 +1,12 @@
 <template>
   <nav-bar class="nav-bar">
     <template slot="left">
-      <img class="left" src="/img/images/logo3.png" alt="" />
+      <img class="left" :src="`${publicPath}/img/images/logo3.png`" alt="" />
     </template>
     <template slot="center">
       <div class="center">
         <span>宁波</span>
-        <img src="/img/images/down2.png" alt="" />
+        <img :src="`${publicPath}/img/images/down2.png`" alt="" />
       </div>
     </template>
     <template slot="right"> 请登录 </template>
@@ -18,6 +18,11 @@ export default {
   name: 'HomeHeaderO',
   components: {
     NavBar
+  },
+  data() {
+    return {
+      publicPath: process.env.BASE_URL
+    }
   }
 }
 </script>

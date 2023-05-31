@@ -1,21 +1,26 @@
 <template>
   <div class="header">
     <div class="content">
-      <div class="left"><img src="/img/images/logo1.png" alt="" /></div>
+      <div class="left"><img :src="`${publicPath}/img/images/logo1.png`" alt="" /></div>
       <div class="center">
         <span>宁波</span>
-        <img src="/img/images/down.png" alt="" />
+        <img :src="`${publicPath}/img/images/down.png`" alt="" />
       </div>
       <div class="right">
-        <img src="/img/images/icon-search_b.png" alt="" />
-        <img src="/img/images/more.png" alt="" />
+        <img :src="`${publicPath}/img/images/icon-search_b.png`" alt="" />
+        <img :src="`${publicPath}/img/images/more.png`" alt="" />
       </div>
     </div>
   </div>
 </template>
 <script>
 export default {
-  name: 'HomeHead'
+  name: 'HomeHead',
+  data() {
+    return {
+      publicPath: process.env.BASE_URL
+    }
+  }
 }
 </script>
 <style scoped>

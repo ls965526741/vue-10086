@@ -1,27 +1,18 @@
 <template>
   <div class="home">
     <home-head-o v-show="isShow"></home-head-o>
-    <scroll
-      class="scroll"
-      ref="scroll"
-      :probeType="3"
-      :listenScroll="true"
-      @scroll="contentScroll"
-    >
+    <scroll class="scroll" ref="scroll" :probeType="3" :listenScroll="true" @scroll="contentScroll">
       <home-head></home-head>
       <home-swiper :image="saveSwiperImg"></home-swiper>
       <recommend :image="saveRecommendImg"></recommend>
       <div class="write"></div>
-      <img class="ad" src="/img/adtrue.jpg" alt="" />
+      <img class="ad" :src="`${publicPath}/img/adtrue.jpg`" alt="" />
       <recommend-tools :saveDbGoods="saveFamilyJoin"></recommend-tools>
       <home-detail :phoneData="savePhone"></home-detail>
       <business-detail :businessData="saveBusiness"></business-detail>
       <number-detail :numberData="saveNumber"></number-detail>
       <home-feature :featureData="saveFeature"></home-feature>
-      <home-favourite
-        :favouriteData="saveFavourite"
-        @imageLoad="imageRefresh"
-      ></home-favourite>
+      <home-favourite :favouriteData="saveFavourite" @imageLoad="imageRefresh"></home-favourite>
 
       <div class="footer">
         <p>京ICP备05002571号 证照信息</p>
@@ -60,7 +51,8 @@ export default {
       saveFavourite: {},
       refresh: {},
       isShow: false,
-      topShow: false
+      topShow: false,
+      publicPath: process.env.BASE_URL
     }
   },
   components: {
@@ -79,7 +71,7 @@ export default {
   },
   methods: {
     getData() {
-      this.$http.get('/home/homeswiper').then((res) => {
+      this.$http.get('/home/homeswiper').then(res => {
         this.saveSwiperImg = res.data.homeSwiper
         this.saveRecommendImg = res.data.homeRecommend
         this.saveFamilyJoin = res.data.familyJoin

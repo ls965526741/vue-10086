@@ -1,6 +1,7 @@
 const name = '10086' // page title
 
 module.exports = {
+  publicPath: process.env.NODE_ENV === 'development' ? '/10086/' : '/10086/',
   devServer: {
     open: true,
     host: 'localhost',

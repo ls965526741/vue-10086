@@ -13,6 +13,7 @@
 </template>
 <script>
 import { Swiper, SwiperItem } from '@/components/swiper'
+const publicPath = process.env.BASE_URL
 export default {
   name: 'Profile',
   components: {
@@ -22,9 +23,9 @@ export default {
   data() {
     return {
       saveImage: [
-        '/img/profile/proswp0.png',
-        '/img/profile/proswp1.jpg',
-        '/img/profile/proswp2.png'
+        `${publicPath}/img/profile/proswp0.png`,
+        `${publicPath}/img/profile/proswp1.jpg`,
+        `${publicPath}/img/profile/proswp2.png`
       ]
     }
   },
